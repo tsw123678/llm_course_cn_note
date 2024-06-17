@@ -1,1 +1,1 @@
-# llm_course_cn_note
+记录llm_course_chn[https://github.com/friendmine/llm-course-chn]的一些笔记
