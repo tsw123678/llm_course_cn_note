@@ -7,4 +7,4 @@
 ### [2.1 LLM decode strategies](https://github.com/tsw123678/llm_course_cn_note/blob/main/LLM%20decode%20strategies.md)
 ### 2.2 LLM instruction dataset
 [参考Chinese_llama_alpaca由GPT生成数据脚本](https://github.com/ymcui/Chinese-LLaMA-Alpaca/blob/main/scripts/crawl_prompt.py)
-### 2.3 [Chat template]()
+### [2.3 Chat template]()
