@@ -3,4 +3,4 @@
 ## [2.DL(*尚未个人整理)](http://www.ai-start.com/dl2017/)
 ## [3.LLM Base](https://github.com/tsw123678/llm_course_cn_note/blob/main/LLM-base.md)
 ## 4.LLM scientist
-### 4.1 [LLM decode strategies](待定)
+### [4.1LLM decode strategies](待定)
