@@ -107,7 +107,6 @@ def _tokenize_fn(
 
     raw_input_ids = labels = [tokenized.input_ids[0] for tokenized in tokenized_list]
 
-    # split input_ids with model_max_length
     input_ids = []
     labels = []
     max_length = tokenizer.model_max_length
@@ -155,7 +154,7 @@ class PretrainDataset(Dataset):
         logging.warning("Tokenizing inputs... This may take some time...")
         data_dict = preprocess(files_ls, tokenizer)
         logging.warning("Tokenizing inputs done.")
-        
+
         self.input_ids = data_dict["input_ids"]
         self.labels = data_dict["labels"]
 
@@ -179,7 +178,6 @@ class DataCollatorForPretrainDataset(object):
         input_ids = torch.nn.utils.rnn.pad_sequence(
             input_ids, batch_first=True, padding_value=self.tokenizer.pad_token_id
         )
-        # padding的部分不计算loss
         labels = torch.nn.utils.rnn.pad_sequence(
             labels, batch_first=True, padding_value=IGNORE_INDEX
         )
@@ -223,8 +221,7 @@ def train():
         model_args.model_name_or_path,
         trust_remote_code=True,
         cache_dir=training_args.cache_dir,
-        # 模型单个batch的最大长度
-        model_max_length=training_args.model_max_length,
+        model_max_length=training_args.model_max_length,  # 模型单个batch的最大长度
         padding_side="right",
         use_fast=False,
     )
@@ -246,10 +243,10 @@ def train():
         model=model,
     )
 
-    # 4.准备dataset and collator
+    # 4.dataset and collator
     data_module = make_pretrain_data_module(tokenizer=tokenizer, data_args=data_args)
 
-    # 5.训练
+    # 5.train
     trainer = Trainer(
         model=model, tokenizer=tokenizer, args=training_args, **data_module
     )

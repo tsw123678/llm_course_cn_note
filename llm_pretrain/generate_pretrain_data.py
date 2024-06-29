@@ -11,7 +11,7 @@
 #    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #    See the License for the specific language governing permissions and
 #    limitations under the License.
-
+import re
 import logging
 import os
 import random
@@ -24,8 +24,6 @@ DEFAULT_PAD_TOKEN = "[PAD]"
 DEFAULT_EOS_TOKEN = "</s>"
 DEFAULT_BOS_TOKEN = "<s>"
 DEFAULT_UNK_TOKEN = "<unk>"
-
-import re
 
 
 def reduce_spaces(s):
@@ -48,7 +46,6 @@ class RawPretrainDataset(Dataset):
         logging.warning("Loading data finished.")
 
         # shuffle files 重新排列
-        # 从0-len(self.files_ls)-1中随机取样，取样个数为len(self.files_ls)，并按照取样结果重新排列self.files_ls
         random_index = random.sample(range(len(self.files_ls)), len(self.files_ls))
         self.files_ls = [self.files_ls[i] for i in random_index]
 
@@ -56,7 +53,7 @@ class RawPretrainDataset(Dataset):
         with open(pretrain_data_path, "r") as f:
             raw_file = f.read()
 
-        raw_file = reduce_spaces(raw_file)
+        # raw_file = reduce_spaces(raw_file)
 
         # 添加结束符，用于区分不同文件
         return f"{raw_file}{tokenizer.eos_token}"
