@@ -8,4 +8,4 @@
 ### 2.2 LLM instruction dataset
 [参考Chinese_llama_alpaca由GPT生成数据脚本](https://github.com/ymcui/Chinese-LLaMA-Alpaca/blob/main/scripts/crawl_prompt.py)
 ### [2.3 Chat template](https://github.com/tsw123678/llm_course_cn_note/blob/main/chat_template.md)
-### [2.4 Pretrain code](https://github.com/tsw123678/llm_course_cn_note/tree/main/pretrain)
+### [2.4 Pretrain code](https://github.com/tsw123678/llm_course_cn_note/tree/main/llm_pretrain)
