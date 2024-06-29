@@ -63,7 +63,7 @@ deepspeed --master_port 29500 --num_gpus=2 run_s2s.py \
 - ZeRO Stage 2: 除了优化器状态，梯度也被分片到不同的设备上。每个设备只需要存储和计算其负责的梯度部分。
 - ZeRO Stage 3: 划分模型参数，或者说，不同的layer. ZeRO-3会在forward和backward的时候，自动将模型参数分配到多个memory。
 
-zero2
+**zero2**
 
 ```json
 {
