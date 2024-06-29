@@ -1,8 +1,4 @@
-# 记录[@llm_course_chn](https://github.com/friendmine/llm-course-chn)的一些笔记，部分笔记来自[@fengdu78](https://github.com/fengdu78)
-## 1. LLM base
-## [1.1 ML](https://github.com/tsw123678/llm_course_cn_note/blob/main/ML.pdf)
-## [1.2 DL](http://www.ai-start.com/dl2017/)
-## [1.3 Other notes](https://github.com/tsw123678/llm_course_cn_note/blob/main/LLM-base.md)
+# 记录[@llm_course_chn](https://github.com/friendmine/llm-course-chn)的一些笔记
 ## 2. LLM scientist
 ### [2.1 Decode strategies](https://github.com/tsw123678/llm_course_cn_note/blob/main/LLM%20decode%20strategies.md)
 ### 2.2 Instruction dataset
