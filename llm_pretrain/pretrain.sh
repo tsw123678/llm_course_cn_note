@@ -1,8 +1,8 @@
 echo ===== PRETRAINING =====
 
-MODEL_PATH=../Meta-llama-3-8B-Instruct
+MODEL_PATH=../Phi-3-mini-4k-instruct
 DATA_PATH=../train_paper
-OUTPUT_DIR=../llama3-cpt-train_paper
+OUTPUT_DIR=../llama3-train-paper
 
 # mkdir $OUTPUT_DIR
 

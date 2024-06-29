@@ -242,6 +242,7 @@ def train():
         tokenizer=tokenizer,
         model=model,
     )
+    model.enable_input_require_grads()
 
     # 4.dataset and collator
     data_module = make_pretrain_data_module(tokenizer=tokenizer, data_args=data_args)
