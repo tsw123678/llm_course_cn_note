@@ -6,4 +6,4 @@
 ### [2.3 Chat template](https://github.com/tsw123678/llm_course_cn_note/blob/main/chat_template.md)
 ### [2.4 Pretrain code](https://github.com/tsw123678/llm_course_cn_note/tree/main/llm_pretrain)
 ### [2.5 Sft code (lora)](https://github.com/tsw123678/llm_course_cn_note/tree/main/llm_sft)
-### [2.6 deepspeed教程](https://github.com/tsw123678/llm_course_cn_note/blob/main/deepspeed.md)
+### [2.6 deepspeed](https://github.com/tsw123678/llm_course_cn_note/blob/main/deepspeed.md)
