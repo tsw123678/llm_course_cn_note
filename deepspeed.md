@@ -25,15 +25,7 @@ FP32：32 bit，4 byte **//** FP16：16bit，2 byte
 
 ![image-20240629163935881](assets/image-20240629163935881.png)
 
-## 2.deepspeed核心思想
-
-DeepSpeed的核心就在于，**GPU显存不够，CPU内存来凑**。
-
-DeepSpeed将当前时刻，训练模型用不到的参数，缓存到CPU中，等到要用到了，再从CPU挪到GPU。这里的“参数”，不仅指的是模型参数，还指optimizer、梯度等。
-
-越多的参数挪到CPU上，GPU的负担就越小；但随之的代价就是，更为频繁的CPU，GPU交互，极大增加了训练推理的时间开销。因此，DeepSpeed使用的一个核心要义是，**时间开销和显存占用的权衡**。
-
-## 3.使用
+## 2.使用
 
 ```bash
 deepspeed --master_port 29500 --num_gpus=2 run_s2s.py \
@@ -44,7 +36,7 @@ deepspeed --master_port 29500 --num_gpus=2 run_s2s.py \
 --deepspeed: 提供的config文件，用来指定许多DeepSpeed的重要参数。
 ```
 
-## 4.zero config
+## 3.zero config
 
 传统的深度学习，模型训练并行，是将模型参数复制多份到多张GPU上，只将数据拆分（如，torch的Dataparallel），这样就会有大量的显存冗余浪费。
 
