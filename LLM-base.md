@@ -146,9 +146,13 @@ for epoch in range(2, epochs):
 ## 4.查看模型结构
 
 ```python
-for children in model.children(): # named_children()
+for children in model.children(): # 遍历所有直接子模块
     print(children)
     print('-----------------')
+
+# for item in model.named_modules(): # 递归遍历所有子模块
+#     print(item)
+#     print("====================================")
 ```
 
 ## 5.早停
